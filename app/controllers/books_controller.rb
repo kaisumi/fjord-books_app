@@ -5,7 +5,6 @@ class BooksController < ApplicationController
   before_action do
     I18n.locale = :ja
   end
-  before_action :authenticate_user!
 
   # GET /books
   # GET /books.json
