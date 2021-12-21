@@ -228,3 +228,7 @@ en:
       notice_create: "%{name} was successfully created."
       notice_update: "%{name} was successfully updated."
       notice_destroy: "%{name} was successfully destroyed."
+  dictionary:
+    edit_profile: "Edit profile"
+    logout: "Logout"
+    loggedin_as_html: "Logged in as <strong>%{email}</strong>."
