@@ -1,6 +1,11 @@
 ---
 ja:
   activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        avatar: アイコン
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
