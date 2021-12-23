@@ -1,6 +1,15 @@
 ---
 ja:
   activerecord:
+    models:
+      user_detail: ユーザープロフィール
+    attributes:
+      user_detail:
+        user_id: ユーザーID
+        user_name: 名前
+        postal_code: 郵便番号
+        address: 住所
+        self_introduction: 自己紹介
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
@@ -227,6 +236,16 @@ ja:
       notice_update: "%{name}が更新されました。"
       notice_destroy: "%{name}が削除されました。"
   dictionary:
-    edit_profile: "プロフィール編集"
+    edit_profile: "ログイン情報編集"
     logout: "ログアウト"
     loggedin_as_html: "<strong>%{email}</strong>でログインしています。"
+    detail_id: "プロフィールID"
+    user: "ユーザーID"
+    name: "名前"
+    postal: "郵便番号"
+    address: "住所"
+    self_introduction: "自己紹介"
+    new_user_detail: "プロフィール作成"
+    user_details: "プロフィール一覧"
+    user_detail: "プロフィール"
+

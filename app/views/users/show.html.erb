@@ -9,3 +9,22 @@
   <%=@user[:email]%>
 </p>
 
+<p>
+  <strong><%= User.human_attribute_name(:name) %>:</strong>
+  <%= @user.user_detail.nil? ? '' : @user.user_detail.user_name %>
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name(:postal_code) %>:</strong>
+  <%= @user.user_detail.nil? ? '' : @user.user_detail.user_name %>
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name(:address) %>:</strong>
+  <%= @user.user_detail.nil? ? '' : @user.user_detail.address%>
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name(:self_introduction) %>:</strong>
+  <%=  @user.user_detail.nil? ? '' : @user.user_detail.self_introduction %>
+</p>
