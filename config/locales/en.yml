@@ -1,6 +1,15 @@
 ---
 en:
   activerecord:
+    models:
+      user_detail: User Profile
+    attributes:
+      user_detail:
+        user_id: User ID
+        user_name: User Name
+        postal_code: Postal Code
+        address: Address
+        self_introduction: Self Introduction
     errors:
       messages:
         record_invalid: 'Validation failed: %{errors}'
@@ -229,6 +238,15 @@ en:
       notice_update: "%{name} was successfully updated."
       notice_destroy: "%{name} was successfully destroyed."
   dictionary:
-    edit_profile: "Edit profile"
+    edit_profile: "Edit Login Info"
     logout: "Logout"
     loggedin_as_html: "Logged in as <strong>%{email}</strong>."
+    new_user_detail: "New User Detail"
+    detail_id: "Profile ID"
+    user: "User ID"
+    name: "Name"
+    postal: "Postal Code"
+    address: "Address"
+    self_introduction: "Self Introduction"
+    user_details: "User Profiles"
+    user_details: "Your Profile"
