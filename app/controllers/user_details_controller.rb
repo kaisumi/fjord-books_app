@@ -8,7 +8,7 @@ class UserDetailsController < ApplicationController
 
   # GET /user_details or /user_details.json
   def index
-    @users = User.all
+    @users = User.order(:id).page(params[:page]).per(10)
   end
 
   # GET /user_details/1 or /user_details/1.json
