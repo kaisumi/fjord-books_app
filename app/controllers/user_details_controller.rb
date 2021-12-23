@@ -40,7 +40,7 @@ class UserDetailsController < ApplicationController
   # PATCH/PUT /user_details/1 or /user_details/1.json
   def update
     respond_to do |format|
-      if current_user.user_detail.id == params[:id]
+      if current_user.user_detail.id == params[:id].to_i
         if @user_detail.update(user_detail_params)
           format.html { redirect_to @user_detail, notice: 'User detail was successfully updated.' }
           format.json { render :show, status: :ok, location: @user_detail }
