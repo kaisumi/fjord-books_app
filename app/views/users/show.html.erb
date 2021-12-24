@@ -33,7 +33,25 @@
   <% end %>
 </p>
 
+<p>
+  <strong><%= User.human_attribute_name(:follows) %>:</strong>
+  <%= @follow_number %>
+  <%= link_to t('views.common.list'), follow_list_path %> 
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name(:followers) %>:</strong>
+  <%= @follower_number %>
+  <%= link_to t('views.common.list'), follower_list_path %> 
+</p>
+
 <% if current_user == @user %>
   <%= link_to t('views.common.edit'), edit_user_registration_path %> |
+<% else %>
+  <% if follower? %>
+    <%= button_to Follow.human_attribute_name(:unfollow), unfollow_path(user_id: @user.id), action: :destroy, method: :delete %>
+  <% else %>
+    <%= button_to Follow.human_attribute_name(:follow), controller: :followers, action: :create, method: :post %>
+  <% end %>
 <% end %>
 <%= link_to t('views.common.back'), users_path %>
