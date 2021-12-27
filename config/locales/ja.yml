@@ -1,6 +1,22 @@
 ---
 ja:
   activerecord:
+    models:
+      book: 本
+    attributes:
+      book:
+        new_book: 本の追加
+        title: 題名
+        memo: メモ
+        author: 著者
+        picture: 画像
+        books: 本の一覧
+        editing_book: 本の編集
+      book/notice:
+        couldnt_save: 個の以下のエラーにより保存できませんでした。
+        successful_book_creation: 本が正常に作成されました。
+        successful_book_update: 本が正常に更新されました。
+        successful_book_destroy: 本が正常に削除されました。
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
@@ -205,21 +221,11 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
-  dictionary:
-    show: "表示"
-    edit: "編集"
-    destroy: "削除"
-    back: "戻る"
-    confirm: "本当によろしいですか？"
-    new_book: "本の追加"
-    error: ""
-    couldnt_save: "個の以下のエラーにより保存できませんでした。"
-    successful_book_creation: "本が正常に作成されました。"
-    successful_book_update: "本が正常に更新されました。"
-    successful_book_destroy: "本が正常に削除されました。"
-    title: "題名"
-    memo: "メモ"
-    author: "著者"
-    picture: "画像"
-    books: "本の一覧"
-    editing_book: "本の編集"
+  views:
+    common:
+      show: "表示"
+      edit: "編集"
+      destroy: "削除"
+      back: "戻る"
+      confirm: "本当によろしいですか？"
+      error: ""

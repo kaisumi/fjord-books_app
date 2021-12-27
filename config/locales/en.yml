@@ -1,6 +1,22 @@
 ---
 en:
   activerecord:
+    models:
+      book: Book
+    attributes:
+      book:
+        new_book: New Book
+        title: Title
+        memo: Memo
+        author: Author
+        picture: Picture
+        books: Books
+        editing_book: Editing Book
+      book/notice:
+        couldnt_save: "prohibited this book from being saved:"
+        successful_book_creation: Book was successfully created.
+        successful_book_update: Book was successfully updated.
+        successful_book_destroy: Book was successfully destroyed.
     errors:
       messages:
         record_invalid: 'Validation failed: %{errors}'
@@ -213,21 +229,11 @@ en:
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
     pm: pm
-  dictionary:
-    show: "Show"
-    edit: "Edit"
-    destroy: "Destroy"
-    back: "Back"
-    confirm: "Are you sure?"
-    new_book: "New Book"
-    error: "error"
-    couldnt_save: "prohibited this book from being saved:"
-    successful_book_creation: "Book was successfully created."
-    successful_book_update: "Book was successfully updated."
-    successful_book_destroy: "Book was successfully destroyed."
-    title: "Title"
-    memo: "Memo"
-    author: "Author"
-    picture: "Picture"
-    books: "Books"
-    editing_book: "Editing Book"
+  views:
+    common:
+      show: "Show"
+      edit: "Edit"
+      destroy: "Destroy"
+      back: "Back"
+      confirm: "Are you sure?"
+      error: "error"
