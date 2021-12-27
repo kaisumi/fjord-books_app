@@ -1,0 +1,18 @@
+
+<p>
+  <strong><%=Report.human_attribute_name(:title)%>:</strong>
+  <%= @report.title %>
+</p>
+
+<p>
+  <strong><%=Report.human_attribute_name(:body)%>:</strong>
+  <%= @report.body %>
+</p>
+
+<p>
+  <strong><%=Report.human_attribute_name(:user)%>:</strong>
+  <%= @report.user_id %>
+</p>
+
+<%= link_to t('views.common.edit'), edit_report_path(@report) %> |
+<%= link_to t('views.common.back'), reports_path %>
