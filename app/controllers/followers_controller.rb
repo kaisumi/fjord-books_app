@@ -8,7 +8,7 @@ class FollowersController < ApplicationController
   end
 
   def show
-    @followers = \
+    @followers =
       User.find(params[:id]).follows.map do |follower|
         User.find(Follower.find(follower.follower_id).user_id)
       end
