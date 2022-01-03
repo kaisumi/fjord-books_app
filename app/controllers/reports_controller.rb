@@ -10,10 +10,7 @@ class ReportsController < ApplicationController
 
   # GET /reports/1 or /reports/1.json
   def show
-    @comment = Comment.new
-    @comment.commentable_type = 'Report'
-    @comment.commentable_id = params[:id]
-    @comments = @report.comments
+    @comment = Comment.new(commentable: @report)
   end
 
   # GET /reports/new
@@ -28,27 +25,23 @@ class ReportsController < ApplicationController
   def create
     @report = Report.new(report_params)
     @report.user_id = current_user.id
-    respond_to do |format|
-      if @report.save
-        format.html { redirect_to @report, notice: t('controllers.common.notice_create', name: Report.model_name.human) }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-      end
+    if @report.save
+      redirect_to @report, notice: t('controllers.common.notice_create', name: Report.model_name.human)
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /reports/1 or /reports/1.json
   def update
-    respond_to do |format|
-      if @report.user_id == current_user.id
-        if @report.update(report_params)
-          format.html { redirect_to @report, notice: t('controllers.common.notice_update', name: Report.model_name.human) }
-        else
-          format.html { render :edit, status: :unprocessable_entity }
-        end
+    if @report.user_id == current_user.id
+      if @report.update(report_params)
+        redirect_to @report, notice: t('controllers.common.notice_update', name: Report.model_name.human)
       else
-        format.html { redirect_to @report, notice: t('views.common.edit') + t('errors.messages.wrong_user') }
+        render :edit, status: :unprocessable_entity
       end
+    else
+      redirect_to @report, notice: t('views.common.edit') + t('errors.messages.wrong_user')
     end
   end
 
@@ -56,11 +49,10 @@ class ReportsController < ApplicationController
   def destroy
     if @report.user_id == current_user.id
       @report.destroy
-      respond_to do |format|
-        format.html { redirect_to reports_url, notice: t('controllers.common.notice_destroy', name: Report.model_name.human) }
-      end
+      redirect_to reports_url, notice: t('controllers.common.notice_destroy', name: Report.model_name.human)
+
     else
-      format.html { redirect_to @report, notice: t('views.common.destroy') + t('errors.messages.wrong_user') }
+      redirect_to @report, notice: t('views.common.destroy') + t('errors.messages.wrong_user')
     end
   end
 

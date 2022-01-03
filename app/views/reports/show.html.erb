@@ -1,16 +1,16 @@
 
 <p>
-  <strong><%=Report.human_attribute_name(:title)%>:</strong>
+  <strong><%= Report.human_attribute_name(:title) %>:</strong>
   <%= @report.title %>
 </p>
 
 <p>
-  <strong><%=Report.human_attribute_name(:body)%>:</strong>
+  <strong><%= Report.human_attribute_name(:body) %>:</strong>
   <%= @report.body %>
 </p>
 
 <p>
-  <strong><%=Report.human_attribute_name(:user)%>:</strong>
+  <strong><%= Report.human_attribute_name(:user) %>:</strong>
   <%= @report.user_id %>
 </p>
 
@@ -21,4 +21,4 @@
 
 <%= render 'comments/form' %>
 
-<%= render 'comments/index' %>
+<%= render 'comments/index', comments: @report.comments %>

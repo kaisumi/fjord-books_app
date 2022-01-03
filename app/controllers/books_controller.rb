@@ -12,10 +12,7 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
-    @comment = Comment.new
-    @comment.commentable_type = 'Book'
-    @comment.commentable_id = params[:id]
-    @comments = @book.comments
+    @comment = Comment.new(commentable: @book)
   end
 
   # GET /books/new
