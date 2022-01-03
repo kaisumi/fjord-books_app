@@ -2,9 +2,6 @@
 
 class UserDetailsController < ApplicationController
   before_action :set_user_detail, only: %i[show edit update destroy]
-  before_action do
-    I18n.locale = :ja
-  end
 
   # GET /user_details or /user_details.json
   def index
