@@ -12,11 +12,6 @@ en:
         picture: Picture
         books: Books
         editing_book: Editing Book
-      book/notice:
-        couldnt_save: "prohibited this book from being saved:"
-        successful_book_creation: Book was successfully created.
-        successful_book_update: Book was successfully updated.
-        successful_book_destroy: Book was successfully destroyed.
     errors:
       messages:
         record_invalid: 'Validation failed: %{errors}'
@@ -237,3 +232,8 @@ en:
       back: "Back"
       confirm: "Are you sure?"
       error: "error"
+  books:
+    couldnt_save: "prohibited this book from being saved:"
+    successful_book_creation: Book was successfully created.
+    successful_book_update: Book was successfully updated.
+    successful_book_destroy: Book was successfully destroyed.
