@@ -1,10 +1,8 @@
 ---
 ja:
   activerecord:
-    models:
-      user_detail: ユーザープロフィール
     attributes:
-      user_detail:
+      user:
         user_id: ユーザーID
         user_name: 名前
         postal_code: 郵便番号
@@ -245,8 +243,3 @@ ja:
     postal: "郵便番号"
     address: "住所"
     self_introduction: "自己紹介"
-    new_user_detail: "プロフィール作成"
-    user_details: "プロフィール一覧"
-    user_detail: "プロフィール"
-    editing_user_detail: プロフィールの編集
-
