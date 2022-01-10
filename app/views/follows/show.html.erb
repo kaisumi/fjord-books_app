@@ -1,4 +1,4 @@
-<h1><%= Follow.model_name.human %></h1>
+<h1>Followings</h1>
 
 <table>
   <thead>
@@ -14,18 +14,18 @@
 
   <tbody>
     <% unless @follows.nil? %>
-      <% @follows.each do |user| %>
+      <% @follows.each do |follow| %>
         <tr>
           <th>
-            <% if user.avatar.attached? %>
-              <%= image_tag user.avatar.variant(resize_to_fill: [30, 30])%>
+            <% if follow.avatar.attached? %>
+              <%= image_tag follow.avatar.variant(resize_to_fill: [30, 30])%>
             <% end %>
           </th>
-          <td><%= user.email %></td>
-          <td><%= user.name %></td>
-          <td><%= user.postal_code %></td>
-          <td><%= user.address %></td>
-          <td><%= link_to t('views.common.show'), user %></td>
+          <td><%= follow.email %></td>
+          <td><%= follow.name %></td>
+          <td><%= follow.postal_code %></td>
+          <td><%= follow.address %></td>
+          <td><%= link_to t('views.common.show'), follow %></td>
         </tr>
       <% end %>
     <% end %>

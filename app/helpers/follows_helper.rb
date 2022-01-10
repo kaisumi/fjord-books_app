@@ -2,7 +2,7 @@
 
 module FollowsHelper
   def follower?
-    follower = Follower.find_by(user_id: current_user.id)
-    (Follow.find_by(user_id: params[:id], follower_id: follower.id).nil? ? false : true) unless follower.nil?
+    follower = User.find(current_user.id)
+    follower.followings.exists?(id: params[:id])
   end
 end
