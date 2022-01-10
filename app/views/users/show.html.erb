@@ -51,7 +51,7 @@
   <% if follower? %>
     <%= button_to Follow.human_attribute_name(:unfollow), unfollow_path(user_id: @user.id), action: :destroy, method: :delete %>
   <% else %>
-    <%= button_to Follow.human_attribute_name(:follow), controller: :followers, action: :create, method: :post %>
+    <%= button_to Follow.human_attribute_name(:follow), follow_path, action: :create, method: :post %>
   <% end %>
 <% end %>
 <%= link_to t('views.common.back'), users_path %>
