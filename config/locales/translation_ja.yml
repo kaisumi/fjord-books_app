@@ -4,7 +4,6 @@ ja:
       book: 本  #g
       user: ユーザ
       follow: フォロー
-      follower: フォロワー
 
     attributes:
       book:
@@ -23,3 +22,4 @@ ja:
       follow:
         follow: フォロー
         unfollow: フォロー解除
+        follower: フォロワー
