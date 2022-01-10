@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @follower_number = @user.follows.count
-    @follow_number = Follower.exists?(user_id: params[:id]) ? Follower.find_by(user_id: params[:id]).follows.count : 0
+    @follow_number = @user.followings.count
+    @follower_number = @user.followers.count
   end
 end
