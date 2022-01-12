@@ -34,4 +34,4 @@
 
 <%= paginate @follows unless @follows.nil? %> 
 
-<%= link_to t('views.common.back'), user_path %>
+<%= link_to t('views.common.back'), user_path(id: params[:user_id]) %>
