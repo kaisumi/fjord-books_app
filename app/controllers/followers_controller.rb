@@ -2,8 +2,7 @@
 
 class FollowersController < ApplicationController
   def index
-    @followers = User.find(params[:user_id]).followers
-    @followers = Kaminari.paginate_array(@followers).page(params[:page]) unless @followers.nil?
+    @followers = User.find(params[:user_id]).followers.page(params[:page])
   end
 
   def create
