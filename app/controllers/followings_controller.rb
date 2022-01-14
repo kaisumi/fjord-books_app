@@ -2,7 +2,6 @@
 
 class FollowingsController < ApplicationController
   def index
-    @follows = User.find(params[:user_id]).followings
-    @follows = Kaminari.paginate_array(@follows).page(params[:page])
+    @follows = User.find(params[:user_id]).followings.page(params[:page])
   end
 end

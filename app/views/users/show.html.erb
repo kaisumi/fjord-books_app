@@ -48,7 +48,7 @@
 <% if current_user == @user %>
   <%= link_to t('views.common.edit'), edit_user_registration_path %> |
 <% else %>
-  <% if follower? %>
+  <% if follower?(follower_id: current_user.id, following_id: @user.id) %>
     <%= button_to Follow.human_attribute_name(:unfollow), user_follower_path(user_id: @user.id, id: current_user.id), method: :delete %>
   <% else %>
     <%= button_to Follow.human_attribute_name(:follow), user_followers_path(user_id: @user.id, id: current_user.id), method: :post %>
