@@ -47,3 +47,13 @@ $ git clone https://github.com/自分のアカウント名/fjord-books_app.git
 9. 合格したら上記Pull Requestをマージしてください（ `02-i18n` へのマージのみ。 `main` へのマージは不要です）
 
 「kaminari を使ってページング処理を実装する」以降のプラクティスでは、ブランチ名（ `02-i18n` ）の部分だけを置き換えて、同じ手順で作業してください。
+
+### my-github_loginでの環境変数の設定
+GitHubで取得したClient IDとClient secretsを以下の環境変数に設定します。
+|環境変数|内容|
+| --- | --- |
+|GITHUB_KEY|Client ID|
+|GITHUB_SECRET|Client secret|
+
+
+Client IDとClient secretはGitHubの[［Settings］->［Developer settings］](https://github.com/settings/developers)->［OAuth Apps］から取得できます。
