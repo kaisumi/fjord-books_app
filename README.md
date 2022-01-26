@@ -49,11 +49,15 @@ $ git clone https://github.com/自分のアカウント名/fjord-books_app.git
 「kaminari を使ってページング処理を実装する」以降のプラクティスでは、ブランチ名（ `02-i18n` ）の部分だけを置き換えて、同じ手順で作業してください。
 
 ### my-github_loginでの環境変数の設定
-GitHubで取得したClient IDとClient secretsを以下の環境変数に設定します。
+1. GitHubでの設定
+Client IDとClient secretはGitHubの[［Settings］->［Developer settings］](https://github.com/settings/developers)->［OAuth Apps］で、以下の内容を設定します。
+- Application name: 任意の文字列
+- Homepage URL: http://localhost:3000/books
+- Authorization callback URL: http://localhost:3000/users/auth/github
+
+2. GitHubで取得したClient IDとClient secretsを以下の環境変数に設定します。
+
 |環境変数|内容|
 | --- | --- |
 |GITHUB_KEY|Client ID|
 |GITHUB_SECRET|Client secret|
-
-
-Client IDとClient secretはGitHubの[［Settings］->［Developer settings］](https://github.com/settings/developers)->［OAuth Apps］から取得できます。
